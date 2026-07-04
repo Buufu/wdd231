@@ -123,6 +123,14 @@ section img {
     height: auto;
 }
 
+/* ---------- Layout Utility ---------- */
+
+header,
+main,
+footer {
+    display: block;
+}
+
 /* ---------- Buttons ---------- */
 
 .buttons {
