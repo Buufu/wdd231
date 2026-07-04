@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Andrew Ssebuufu | WDD231 Home</title>
+
+    <meta name="author" content="Andrew Ssebuufu">
+    <meta name="description" content="WDD231 Course Home Page">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/larger.css">
+
+    <script src="scripts/navigation.js" defer></script>
+    <script src="scripts/date.js" defer></script>
+    <script src="scripts/course.js" defer></script>
+</head>
+
+<body>
+
+<header>
+
+    <div class="logo">
+
+        <img src="images/logo.webp" alt="Site Logo" width="80" height="80">
+
+        <span>Andrew Ssebuufu</span>
+
+    </div>
+
+    <button id="menu" aria-label="Open Navigation">
+        ☰
+    </button>
+
+    <nav>
+
+        <ul class="navigation">
+
+            <li><a class="active" href="index.html">Home</a></li>
+
+            <li><a href="chamber/">Chamber</a></li>
+
+            <li><a href="final/">Final</a></li>
+
+        </ul>
+
+    </nav>
+
+</header>
+
+<main>
+
+<h1>Home</h1>
+
+<div class="top-grid">
+
+<section>
+
+<h2>About Me</h2>
+
+<p>
+
+I am a curious learner who enjoys creating clear, useful web experiences and exploring how thoughtful design and code work together. I am taking this course to strengthen my front-end development skills, build confidence with modern web tools, and create projects that are both functional and accessible.
+
+</p>
+
+</section>
+
+<section>
+
+<h2>Student Photo</h2>
+
+<img
+src="images/profile.webp"
+alt="Student Profile"
+width="300"
+height="400"
+loading="lazy">
+
+</section>
+
+</div>
+
+<section class="certificate">
+
+<h2>Web Certificate Courses</h2>
+
+<div class="buttons">
+
+<button id="all">All</button>
+
+<button id="wdd">WDD</button>
+
+<button id="cse">CSE</button>
+
+</div>
+
+<div id="courses"></div>
+
+<p id="credits"></p>
+
+</section>
+
+</main>
+
+<footer>
+
+<div class="social">
+
+<a href="https://github.com/yourusername" target="_blank">
+
+<img src="images/github.svg" alt="GitHub">
+
+</a>
+
+<a href="https://linkedin.com/in/yourprofile" target="_blank">
+
+<img src="images/linkedin.svg" alt="LinkedIn">
+
+</a>
+
+<a href="https://x.com/" target="_blank">
+
+<img src="images/x.svg" alt="X">
+
+</a>
+
+</div>
+
+<p>
+
+©
+
+<span id="currentyear"></span>
+
+Andrew Ssebuufu • Uganda
+
+</p>
+
+<p id="lastModified"></p>
+
+</footer>
+
+</body>
+</html>

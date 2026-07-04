@@ -1,0 +1,201 @@
+/* -----------------------------
+   WDD231 Home Page
+   small.css
+------------------------------ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary: #0f4c81;
+    --secondary: #1d1d1d;
+    --accent: #f4b400;
+    --light: #f5f5f5;
+    --completed: #2e8b57;
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+    background: var(--light);
+    color: #222;
+    line-height: 1.6;
+}
+
+/* ---------- Header ---------- */
+
+header {
+    background: var(--primary);
+    color: white;
+    padding: 1rem;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.logo img {
+    width: 45px;
+    height: 45px;
+}
+
+.logo span {
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+/* ---------- Navigation ---------- */
+
+#menu {
+    margin-top: 1rem;
+    font-size: 2rem;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+.navigation {
+    list-style: none;
+    display: none;
+}
+
+.navigation.open {
+    display: block;
+}
+
+.navigation li {
+    margin: .5rem 0;
+}
+
+.navigation a {
+    display: block;
+    text-decoration: none;
+    color: white;
+    padding: .8rem;
+    border-radius: 6px;
+}
+
+.navigation a:hover,
+.navigation .active {
+    background: var(--accent);
+    color: black;
+}
+
+/* ---------- Main ---------- */
+
+main {
+    max-width: 1100px;
+    margin: auto;
+    padding: 1rem;
+}
+
+h1 {
+    margin-bottom: 1rem;
+}
+
+section {
+    background: white;
+    margin-bottom: 1.5rem;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0,0,0,.1);
+}
+
+section h2 {
+    background: var(--secondary);
+    color: white;
+    text-align: center;
+    padding: .8rem;
+}
+
+section p {
+    padding: 1rem;
+}
+
+section img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+/* ---------- Buttons ---------- */
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: .5rem;
+    flex-wrap: wrap;
+    padding: 1rem;
+}
+
+.buttons button {
+    padding: .7rem 1.2rem;
+    border: none;
+    background: var(--primary);
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: .3s;
+}
+
+.buttons button:hover {
+    background: var(--accent);
+    color: black;
+}
+
+/* ---------- Course Cards ---------- */
+
+#courses {
+    display: grid;
+    gap: .75rem;
+    padding: 1rem;
+}
+
+.course {
+    background: #ddd;
+    padding: .8rem;
+    text-align: center;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.course.completed {
+    background: var(--completed);
+    color: white;
+}
+
+#credits {
+    text-align: center;
+    padding-bottom: 1rem;
+    font-weight: bold;
+}
+
+/* ---------- Footer ---------- */
+
+footer {
+    background: var(--secondary);
+    color: white;
+    text-align: center;
+    padding: 1.5rem;
+}
+
+.social {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.social img {
+    width: 40px;
+    height: 40px;
+}
+
+footer p {
+    margin: .4rem 0;
+}

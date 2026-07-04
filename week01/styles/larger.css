@@ -1,0 +1,71 @@
+/* -----------------------------
+   WDD231 Home Page
+   larger.css
+------------------------------ */
+
+@media screen and (min-width: 768px) {
+
+    /* ---------- Header ---------- */
+
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem 2rem;
+    }
+
+    /* Hide hamburger */
+    #menu {
+        display: none;
+    }
+
+    /* Horizontal Navigation */
+    nav {
+        display: block;
+    }
+
+    .navigation {
+        display: flex;
+        gap: 1rem;
+        align-items: center;
+    }
+
+    .navigation li {
+        margin: 0;
+    }
+
+    .navigation a {
+        padding: .75rem 1.25rem;
+        transition: background .3s ease;
+    }
+
+    /* ---------- Top Sections ---------- */
+
+    .top-grid {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        gap: 1.5rem;
+        margin-bottom: 2rem;
+    }
+
+    /* ---------- Courses ---------- */
+
+    #courses {
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    }
+
+    /* ---------- Footer ---------- */
+
+    footer {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        align-items: center;
+        gap: 1rem;
+        text-align: center;
+    }
+
+    .social {
+        margin-bottom: 0;
+    }
+
+}
