@@ -11,10 +11,13 @@
     width: auto;
   }
 
-  .navigation {
+  .navigation,
+  .navigation.open,
+  .navigation:not(.open) {
     display: flex;
     flex-direction: row;
     gap: 0.6rem;
+    width: auto;
   }
 
   .navigation a {
