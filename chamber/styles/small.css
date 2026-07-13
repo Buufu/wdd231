@@ -111,6 +111,8 @@ nav {
 
 main {
   padding: 1rem 0 2rem;
+  display: grid;
+  gap: 1rem;
 }
 
 .hero,
@@ -226,11 +228,6 @@ main {
 .member-level.gold {
   background: #ffefcc;
   color: #9c6500;
-}
-
-main {
-  display: grid;
-  gap: 1rem;
 }
 
 .hero {
