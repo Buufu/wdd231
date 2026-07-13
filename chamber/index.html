@@ -17,6 +17,7 @@
     <link rel="stylesheet" href="styles/normalize.css">
     <link rel="stylesheet" href="styles/small.css">
     <link rel="stylesheet" href="styles/larger.css">
+    <script src="scripts/home.js" defer></script>
     <script src="scripts/menu.js" defer></script>
     <script src="scripts/date.js" defer></script>
   </head>
@@ -34,17 +35,46 @@
         <ul class="navigation">
           <li><a href="index.html" class="active">Home</a></li>
           <li><a href="directory.html">Directory</a></li>
-          <li><a href="#">Join</a></li>
-          <li><a href="#">Contact</a></li>
+          <li><a href="join.html">Join</a></li>
+          <li><a href="contact.html">Contact</a></li>
         </ul>
       </nav>
     </header>
 
     <main>
       <section class="hero">
-        <h1>Welcome to Uganda's Regional Business Network</h1>
-        <p>This chamber homepage highlights Uganda's growing business districts and connects members from Kampala, Jinja, Mbarara, Fort Portal, and Gulu.</p>
+        <div class="hero-copy">
+          <h1>Welcome to Uganda's Regional Business Network</h1>
+          <p>This chamber homepage highlights Uganda's growing business districts and connects members from Kampala, Jinja, Mbarara, Fort Portal, and Gulu.</p>
+          <a class="cta-link" href="join.html">Join the Chamber</a>
+        </div>
         <img class="hero-image" src="https://images.unsplash.com/photo-1526397751294-331021109fbd?auto=format&fit=crop&w=1200&q=80" alt="A scenic view of Uganda's landscape and city life" loading="eager">
+      </section>
+
+      <section class="info-grid" aria-label="Chamber updates">
+        <article class="card">
+          <h2>Upcoming Events</h2>
+          <ul class="event-list">
+            <li><strong>Regional Trade Expo</strong><br>August 14, 2026 • Kampala</li>
+            <li><strong>Women in Business Forum</strong><br>September 3, 2026 • Jinja</li>
+            <li><strong>Community Networking Night</strong><br>October 8, 2026 • Mbarara</li>
+          </ul>
+        </article>
+
+        <article class="card weather-card" id="weather">
+          <h2>Weather in Kampala</h2>
+          <div class="weather-summary">
+            <p id="weather-temp">Loading weather…</p>
+            <div id="weather-icon" class="weather-icon" aria-label="Weather icon"></div>
+          </div>
+          <p id="weather-description">Checking forecast…</p>
+          <ul id="forecast" class="forecast-list"></ul>
+        </article>
+      </section>
+
+      <section class="spotlights-section" aria-labelledby="spotlight-heading">
+        <h2 id="spotlight-heading">Featured Member Spotlights</h2>
+        <div id="spotlights" class="spotlights-grid"></div>
       </section>
     </main>
 

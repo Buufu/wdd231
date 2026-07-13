@@ -31,6 +31,19 @@
     align-items: center;
   }
 
+  .hero {
+    grid-template-columns: 1.1fr 0.9fr;
+    align-items: center;
+  }
+
+  .info-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .spotlights-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
   .directory-grid {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
