@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" role="img" aria-label="Blue River Studio illustration">
+  <rect width="600" height="400" fill="#f2f6ff"/>
+  <rect x="95" y="95" width="410" height="210" rx="24" fill="#314f85"/>
+  <circle cx="220" cy="200" r="70" fill="#f6a623"/>
+  <rect x="320" y="145" width="120" height="120" rx="14" fill="#ffffff"/>
+  <path d="M360 170l40 40-40 40" stroke="#314f85" stroke-width="18" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="300" y="340" text-anchor="middle" font-family="Segoe UI, sans-serif" font-size="28" fill="#223654">Studio</text>
+</svg>

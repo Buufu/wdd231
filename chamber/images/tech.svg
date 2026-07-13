@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" role="img" aria-label="Mesa Tech Solutions illustration">
+  <rect width="600" height="400" fill="#f7f8fa"/>
+  <rect x="90" y="110" width="420" height="180" rx="24" fill="#2c3e50"/>
+  <rect x="130" y="150" width="140" height="100" rx="12" fill="#5db7ff"/>
+  <rect x="300" y="150" width="150" height="100" rx="12" fill="#f6a623"/>
+  <rect x="470" y="150" width="20" height="100" rx="10" fill="#ffffff"/>
+  <text x="300" y="340" text-anchor="middle" font-family="Segoe UI, sans-serif" font-size="28" fill="#243648">Mesa Tech</text>
+</svg>

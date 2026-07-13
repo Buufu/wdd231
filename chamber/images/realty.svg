@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" role="img" aria-label="Riverstone Realty illustration">
+  <rect width="600" height="400" fill="#eef8f4"/>
+  <rect x="120" y="130" width="360" height="160" rx="24" fill="#2f7d5f"/>
+  <path d="M220 130l95-60 95 60v120h-190z" fill="#f6a623"/>
+  <rect x="250" y="190" width="100" height="70" rx="10" fill="#ffffff"/>
+  <rect x="270" y="210" width="20" height="30" fill="#2f7d5f"/>
+  <rect x="310" y="210" width="20" height="30" fill="#2f7d5f"/>
+  <text x="300" y="340" text-anchor="middle" font-family="Segoe UI, sans-serif" font-size="28" fill="#274d3f">Riverstone Realty</text>
+</svg>

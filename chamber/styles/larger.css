@@ -1,0 +1,39 @@
+@media screen and (min-width: 860px) {
+  header {
+    padding: 1.2rem 0;
+  }
+
+  #menu {
+    display: none;
+  }
+
+  nav {
+    width: auto;
+  }
+
+  .navigation {
+    display: flex;
+    flex-direction: row;
+    gap: 0.6rem;
+  }
+
+  .navigation a {
+    min-width: 96px;
+    text-align: center;
+  }
+
+  .directory-controls {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .directory-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  footer {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    align-items: center;
+  }
+}

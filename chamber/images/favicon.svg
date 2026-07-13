@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Riverside Chamber logo">
+  <rect width="64" height="64" rx="12" fill="#144d7a"/>
+  <path d="M16 20h32v8H16z" fill="#f6a623"/>
+  <path d="M16 32h24v8H16z" fill="#ffffff"/>
+  <path d="M16 44h18v8H16z" fill="#f6a623"/>
+</svg>

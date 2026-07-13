@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" role="img" aria-label="Sunset Floral Co illustration">
+  <rect width="600" height="400" fill="#fff5f7"/>
+  <circle cx="300" cy="190" r="95" fill="#f6a623"/>
+  <path d="M300 95c20 45 55 76 95 95-40 19-75 50-95 95-20-45-55-76-95-95 40-19 75-50 95-95z" fill="#e86988"/>
+  <path d="M300 125c12 28 32 46 59 59-27 13-47 31-59 59-12-28-32-46-59-59 27-13 47-31 59-59z" fill="#ffffff" opacity="0.9"/>
+  <text x="300" y="340" text-anchor="middle" font-family="Segoe UI, sans-serif" font-size="28" fill="#8d3752">Sunset Floral</text>
+</svg>

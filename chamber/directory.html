@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Uganda Regional Chamber | Directory</title>
+    <meta name="description" content="Directory of member businesses from Uganda's major regions and growing urban centers.">
+    <meta name="author" content="Andrew Ssebuufu">
+    <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+    <meta property="og:title" content="Uganda Regional Chamber Directory">
+    <meta property="og:description" content="Explore member businesses and services from Kampala, Jinja, Mbarara, Fort Portal, and beyond.">
+    <meta property="og:image" content="images/chamber-social.svg">
+    <meta property="og:url" content="https://example.com/chamber/directory.html">
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/larger.css">
+    <script src="scripts/directory.js" defer></script>
+    <script src="scripts/menu.js" defer></script>
+    <script src="scripts/date.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <div class="site-branding">
+        <img src="images/favicon.svg" alt="Uganda Regional Chamber logo" width="48" height="48">
+        <div>
+          <p class="brand-name">Uganda Regional Chamber</p>
+          <p class="brand-tag">Connecting business across Uganda</p>
+        </div>
+      </div>
+      <button id="menu" type="button" aria-label="Toggle navigation">☰</button>
+      <nav>
+        <ul class="navigation">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="directory.html" class="active">Directory</a></li>
+          <li><a href="#">Join</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero">
+        <h1>Regional Business Directory</h1>
+        <p>Discover member businesses and community partners helping Uganda's regions grow.</p>
+        <img class="hero-image" src="https://images.unsplash.com/photo-1521295121783-8a321d551ad2?auto=format&fit=crop&w=1200&q=80" alt="A lively view of Uganda's regional communities and landscapes" loading="eager">
+      </section>
+
+      <section class="directory-controls" aria-labelledby="directory-heading">
+        <div>
+          <h2 id="directory-heading">Member Directory</h2>
+          <p>Browse chamber members from Kampala, Jinja, Mbarara, Fort Portal, and Gulu in a visual grid or a compact list view.</p>
+        </div>
+        <div class="view-toggle" role="group" aria-label="Directory view options">
+          <button type="button" class="view-btn active" data-view="grid">Grid View</button>
+          <button type="button" class="view-btn" data-view="list">List View</button>
+        </div>
+      </section>
+
+      <section class="directory-section">
+        <div id="members" class="directory-grid" aria-live="polite"></div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="footer-contact">
+        <p><strong>Uganda Regional Chamber of Commerce</strong></p>
+        <p>Plot 14, Ntinda Road</p>
+        <p>Kampala, Uganda</p>
+        <p>+256 772 555 018</p>
+      </div>
+      <div class="footer-info">
+        <p>Andrew Ssebuufu | WDD 231</p>
+        <p>Last Updated: <span id="lastModified"></span></p>
+      </div>
+      <div class="footer-copy">
+        <p>© <span id="currentyear"></span> Uganda Regional Chamber</p>
+        <p>All rights reserved.</p>
+      </div>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,79 @@
+[
+  {
+    "name": "Kampala Fresh Foods",
+    "address": "Plot 14, Ntinda Road, Kampala",
+    "phone": "+256 772 100 101",
+    "website": "https://www.kampalafreshfoods.ug",
+    "image": "https://images.unsplash.com/photo-1514933651103-005eec06c04b?auto=format&fit=crop&w=900&q=80",
+    "membershipLevel": 3,
+    "description": "A modern food wholesaler serving restaurants, hotels, and local markets across Central Uganda.",
+    "category": "Retail",
+    "region": "Kampala"
+  },
+  {
+    "name": "Nile Business Hub",
+    "address": "Suite 8, Nile Road, Jinja",
+    "phone": "+256 774 200 202",
+    "website": "https://www.nilebusinesshub.ug",
+    "image": "https://images.unsplash.com/photo-1500375592092-40eb2168fd21?auto=format&fit=crop&w=900&q=80",
+    "membershipLevel": 2,
+    "description": "A professional services hub supporting startups, trade, and regional business growth.",
+    "category": "Services",
+    "region": "Jinja"
+  },
+  {
+    "name": "Mbarara Solar Works",
+    "address": "Kikoni Lane, Mbarara",
+    "phone": "+256 782 300 303",
+    "website": "https://www.mbararasolarworks.ug",
+    "image": "https://images.unsplash.com/photo-1500534623283-312aade485b7?auto=format&fit=crop&w=900&q=80",
+    "membershipLevel": 3,
+    "description": "Renewable energy specialists helping homes and businesses in western Uganda cut power costs.",
+    "category": "Energy",
+    "region": "Mbarara"
+  },
+  {
+    "name": "Gulu Digital Hub",
+    "address": "Laroo Division, Gulu",
+    "phone": "+256 790 400 404",
+    "website": "https://www.guludigitalhub.ug",
+    "image": "https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=900&q=80",
+    "membershipLevel": 1,
+    "description": "Technology training and digital solutions for youth entrepreneurs and small businesses.",
+    "category": "Technology",
+    "region": "Gulu"
+  },
+  {
+    "name": "Fort Portal Eco Lodges",
+    "address": "Kabarole Road, Fort Portal",
+    "phone": "+256 704 500 505",
+    "website": "https://www.fortportalecolodges.ug",
+    "image": "https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=900&q=80",
+    "membershipLevel": 2,
+    "description": "Eco-friendly hospitality and tourism experiences for visitors exploring western Uganda.",
+    "category": "Tourism",
+    "region": "Fort Portal"
+  },
+  {
+    "name": "Mbale Agro Traders",
+    "address": "Industrial Area, Mbale",
+    "phone": "+256 703 600 606",
+    "website": "https://www.mbaletagrotraders.ug",
+    "image": "https://images.unsplash.com/photo-1494526585095-c41746248156?auto=format&fit=crop&w=900&q=80",
+    "membershipLevel": 3,
+    "description": "Agricultural supply and produce distribution partners supporting farmers in eastern Uganda.",
+    "category": "Agriculture",
+    "region": "Mbale"
+  },
+  {
+    "name": "Uganda River Logistics",
+    "address": "Njeru Road, Jinja",
+    "phone": "+256 771 700 707",
+    "website": "https://www.ugandariverlogistics.ug",
+    "image": "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=900&q=80",
+    "membershipLevel": 1,
+    "description": "Reliable transport and freight coordination for goods moving between Uganda's river ports and cities.",
+    "category": "Logistics",
+    "region": "Jinja"
+  }
+]

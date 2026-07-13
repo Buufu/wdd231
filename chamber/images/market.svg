@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" role="img" aria-label="Riverside Harvest Market illustration">
+  <rect width="600" height="400" fill="#f7efe0"/>
+  <rect x="70" y="90" width="460" height="220" rx="24" fill="#1f6b4f"/>
+  <rect x="120" y="140" width="140" height="120" rx="12" fill="#f8c24d"/>
+  <rect x="310" y="140" width="150" height="90" rx="12" fill="#ffffff"/>
+  <rect x="310" y="250" width="150" height="30" rx="12" fill="#ffffff" opacity="0.85"/>
+  <text x="300" y="340" text-anchor="middle" font-family="Segoe UI, sans-serif" font-size="28" fill="#1f3d2e">Harvest Market</text>
+</svg>
