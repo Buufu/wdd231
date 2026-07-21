@@ -1,35 +1,115 @@
-const weatherApiKey = 'f5a768d775b2391e02fbd7bd8d6608de';
-const weatherCity = 'Kampala';
+const weatherApiUrl = 'https://api.open-meteo.com/v1/forecast?latitude=0.3476&longitude=32.5825&current=temperature_2m,weather_code&daily=weather_code,temperature_2m_max,temperature_2m_min&timezone=Africa%2FKampala&forecast_days=7';
 const weatherTemp = document.querySelector('#weather-temp');
 const weatherDescription = document.querySelector('#weather-description');
 const weatherIcon = document.querySelector('#weather-icon');
 const forecast = document.querySelector('#forecast');
 const spotlightsContainer = document.querySelector('#spotlights');
 
+function getWeatherDescription(code) {
+  switch (code) {
+    case 0:
+      return 'Clear sky';
+    case 1:
+    case 2:
+    case 3:
+      return 'Partly cloudy';
+    case 45:
+    case 48:
+      return 'Foggy';
+    case 51:
+    case 53:
+    case 55:
+      return 'Drizzle';
+    case 61:
+    case 63:
+    case 65:
+      return 'Rain';
+    case 66:
+    case 67:
+      return 'Freezing rain';
+    case 71:
+    case 73:
+    case 75:
+      return 'Snow';
+    case 80:
+    case 81:
+    case 82:
+      return 'Showers';
+    case 95:
+    case 96:
+    case 99:
+      return 'Thunderstorms';
+    default:
+      return 'Cloudy';
+  }
+}
+
+function getWeatherIcon(code) {
+  switch (code) {
+    case 0:
+      return '☀️';
+    case 1:
+    case 2:
+    case 3:
+      return '⛅';
+    case 45:
+    case 48:
+      return '🌫️';
+    case 51:
+    case 53:
+    case 55:
+    case 61:
+    case 63:
+    case 65:
+    case 80:
+    case 81:
+    case 82:
+      return '🌧️';
+    case 71:
+    case 73:
+    case 75:
+      return '❄️';
+    case 95:
+    case 96:
+    case 99:
+      return '⛈️';
+    default:
+      return '☁️';
+  }
+}
+
 async function getWeather() {
   try {
-    const response = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${weatherCity}&appid=${weatherApiKey}&units=metric`);
+    const response = await fetch(weatherApiUrl);
     if (!response.ok) throw new Error('Unable to load weather data.');
     const data = await response.json();
-    const forecastResponse = await fetch(`https://api.openweathermap.org/data/2.5/forecast?q=${weatherCity}&appid=${weatherApiKey}&units=metric`);
-    const forecastData = await forecastResponse.json();
+    const currentTemp = data.current?.temperature_2m;
+    const weatherCode = data.current?.weather_code;
+    const description = getWeatherDescription(weatherCode);
+    const icon = getWeatherIcon(weatherCode);
 
     if (weatherTemp) {
-      weatherTemp.textContent = `${Math.round(data.main.temp)}°C`;
+      weatherTemp.textContent = currentTemp !== undefined ? `${Math.round(currentTemp)}°C` : 'Weather unavailable';
     }
     if (weatherDescription) {
-      weatherDescription.textContent = data.weather[0].description;
+      weatherDescription.textContent = description;
     }
     if (weatherIcon) {
-      weatherIcon.innerHTML = `<img src="https://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png" alt="${data.weather[0].description}" />`;
+      weatherIcon.innerHTML = `<span aria-hidden="true">${icon}</span>`;
     }
 
-    if (forecast) {
-      const nextDays = forecastData.list.filter((entry, index) => index % 8 === 0).slice(0, 3);
+    if (forecast && Array.isArray(data.daily?.time)) {
+      const nextDays = data.daily.time.slice(1, 4).map((date, index) => ({
+        date,
+        maxTemp: data.daily.temperature_2m_max?.[index + 1],
+        code: data.daily.weather_code?.[index + 1],
+      }));
+
       forecast.innerHTML = nextDays
         .map((entry) => {
-          const date = new Date(entry.dt_txt);
-          return `<li><strong>${date.toLocaleDateString('en-US', { weekday: 'short' })}</strong> ${Math.round(entry.main.temp)}°C</li>`;
+          const dayName = new Date(entry.date).toLocaleDateString('en-US', { weekday: 'short' });
+          const temp = entry.maxTemp !== undefined ? `${Math.round(entry.maxTemp)}°C` : '—';
+          return `<li><strong>${dayName}</strong> ${temp}</li>`;
         })
         .join('');
     }
