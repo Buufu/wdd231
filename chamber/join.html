@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Uganda Regional Chamber | Join</title>
-    <meta name="description" content="Join the Uganda Regional Chamber and connect with businesses across the country.">
+    <meta name="description" content="Apply to join the Uganda Regional Chamber with a membership application form.">
     <meta name="author" content="Andrew Ssebuufu">
     <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
     <meta property="og:title" content="Join the Uganda Regional Chamber">
@@ -19,6 +19,7 @@
     <link rel="stylesheet" href="styles/larger.css">
     <script src="scripts/menu.js" defer></script>
     <script src="scripts/date.js" defer></script>
+    <script src="scripts/join.js" defer></script>
   </head>
   <body>
     <header>
@@ -42,21 +43,148 @@
 
     <main>
       <section class="hero">
-        <h1>Join the Uganda Regional Chamber</h1>
-        <p>Grow your visibility, connect with regional partners, and support business opportunities across Uganda.</p>
+        <h1>Apply for Membership</h1>
+        <p>Submit your application to join the Uganda Regional Chamber and begin connecting with businesses across the country.</p>
         <a class="cta-link" href="contact.html">Contact the Chamber</a>
       </section>
 
-      <section class="info-grid" aria-label="Membership benefits">
-        <article class="card">
-          <h2>Why Join</h2>
-          <p>Members gain access to a trusted network of entrepreneurs, policymakers, and service providers.</p>
-        </article>
-        <article class="card">
-          <h2>Membership Levels</h2>
-          <p>Choose from bronze, silver, and gold tiers to match the scale of your business and outreach goals.</p>
-        </article>
+      <section class="join-grid" aria-label="Membership application">
+        <form class="join-form" method="get" action="thankyou.html">
+          <h2>Membership Application</h2>
+          <label>
+            <span>First Name</span>
+            <input type="text" name="first-name" title="Enter your first name" autocomplete="given-name" required>
+          </label>
+
+          <label>
+            <span>Last Name</span>
+            <input type="text" name="last-name" title="Enter your last name" autocomplete="family-name" required>
+          </label>
+
+          <label>
+            <span>Organizational Title</span>
+            <input type="text" name="organization-title" title="Enter your organizational title with letters, hyphens, and spaces only" autocomplete="organization-title" pattern="[A-Za-z\s-]{7,}" placeholder="Example: Executive Director">
+          </label>
+
+          <label>
+            <span>Email Address</span>
+            <input type="email" name="email" title="Enter your email address" autocomplete="email" placeholder="name@example.com" required>
+          </label>
+
+          <label>
+            <span>Mobile Phone Number</span>
+            <input type="tel" name="mobile-phone" title="Enter your mobile phone number" autocomplete="tel" placeholder="+256 772 555 018" required>
+          </label>
+
+          <label>
+            <span>Business / Organization Name</span>
+            <input type="text" name="organization" title="Enter your business or organization name" autocomplete="organization" required>
+          </label>
+
+          <label>
+            <span>Membership Level</span>
+            <select name="membership" title="Choose a membership level" required>
+              <option value="" disabled selected>Select a level</option>
+              <option value="np">NP Membership</option>
+              <option value="bronze">Bronze Membership</option>
+              <option value="silver">Silver Membership</option>
+              <option value="gold">Gold Membership</option>
+            </select>
+          </label>
+
+          <label>
+            <span>Business / Organization Description</span>
+            <textarea name="organization-description" title="Describe your business or organization"></textarea>
+          </label>
+
+          <input type="hidden" name="timestamp" id="timestamp">
+          <input type="submit" value="Submit Application">
+        </form>
+
+        <aside class="membership-levels" aria-labelledby="membership-heading">
+          <h2 id="membership-heading">Membership Levels</h2>
+
+          <article class="membership-card">
+            <h3>NP Membership</h3>
+            <p>Designed for nonprofit organizations with no membership fee and a focus on community impact.</p>
+            <a class="membership-link" href="#" data-modal="modal-np">View benefits</a>
+          </article>
+
+          <article class="membership-card">
+            <h3>Bronze Membership</h3>
+            <p>Entry-level membership offering basic networking access, chamber emails, and listing promotions.</p>
+            <a class="membership-link" href="#" data-modal="modal-bronze">View benefits</a>
+          </article>
+
+          <article class="membership-card">
+            <h3>Silver Membership</h3>
+            <p>Includes event discounts, training notices, and featured business alerts across the chamber network.</p>
+            <a class="membership-link" href="#" data-modal="modal-silver">View benefits</a>
+          </article>
+
+          <article class="membership-card">
+            <h3>Gold Membership</h3>
+            <p>Priority sponsorship opportunities, high visibility advertising, and premium access to regional programs.</p>
+            <a class="membership-link" href="#" data-modal="modal-gold">View benefits</a>
+          </article>
+        </aside>
       </section>
+
+      <dialog id="modal-np" class="membership-modal" aria-labelledby="modal-np-title" aria-describedby="modal-np-desc">
+        <div class="dialog-content">
+          <h3 id="modal-np-title">NP Membership Benefits</h3>
+          <p id="modal-np-desc">Nonprofit organizations can participate in chamber planning, obtain event scholarships, and receive free listing support.</p>
+          <ul>
+            <li>Volunteer event coordination support</li>
+            <li>Free chamber directory listing</li>
+            <li>Invites to community partnership meetings</li>
+            <li>Access to nonprofit grant workshops</li>
+          </ul>
+          <button type="button" class="modal-close">Close</button>
+        </div>
+      </dialog>
+
+      <dialog id="modal-bronze" class="membership-modal" aria-labelledby="modal-bronze-title" aria-describedby="modal-bronze-desc">
+        <div class="dialog-content">
+          <h3 id="modal-bronze-title">Bronze Membership Benefits</h3>
+          <p id="modal-bronze-desc">Bronze members get basic exposure, networking invitations, and digital promotion from the chamber.</p>
+          <ul>
+            <li>Chamber newsletter listing</li>
+            <li>Invitation to monthly networking events</li>
+            <li>Business growth resource guides</li>
+            <li>Access to local supplier directories</li>
+          </ul>
+          <button type="button" class="modal-close">Close</button>
+        </div>
+      </dialog>
+
+      <dialog id="modal-silver" class="membership-modal" aria-labelledby="modal-silver-title" aria-describedby="modal-silver-desc">
+        <div class="dialog-content">
+          <h3 id="modal-silver-title">Silver Membership Benefits</h3>
+          <p id="modal-silver-desc">Silver members receive enhanced promotion, event discounts, and training access for growing their business.</p>
+          <ul>
+            <li>Featured business spotlight</li>
+            <li>Discounted workshop registration</li>
+            <li>Social media shout-outs</li>
+            <li>Priority event invites</li>
+          </ul>
+          <button type="button" class="modal-close">Close</button>
+        </div>
+      </dialog>
+
+      <dialog id="modal-gold" class="membership-modal" aria-labelledby="modal-gold-title" aria-describedby="modal-gold-desc">
+        <div class="dialog-content">
+          <h3 id="modal-gold-title">Gold Membership Benefits</h3>
+          <p id="modal-gold-desc">Gold members enjoy premium advertising, sponsorship priority, and executive-level business development support.</p>
+          <ul>
+            <li>Homepage spotlight placements</li>
+            <li>Leadership roundtables</li>
+            <li>Sponsored event promotion</li>
+            <li>One-on-one business coaching</li>
+          </ul>
+          <button type="button" class="modal-close">Close</button>
+        </div>
+      </dialog>
     </main>
 
     <footer>
