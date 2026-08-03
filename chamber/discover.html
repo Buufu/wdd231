@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discover — Uganda Regional Chamber</title>
+    <meta name="description" content="Discover the top places and features of our region, curated for visitors and prospective members.">
+    <meta name="author" content="Andrew Ssebuufu">
+    <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/discover.css">
+    <script src="scripts/menu.js" defer></script>
+    <script src="scripts/date.js" defer></script>
+    <script type="module" src="scripts/discover.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <div class="site-branding">
+        <img src="images/favicon.svg" alt="Uganda Regional Chamber logo" width="48" height="48">
+        <div>
+          <p class="brand-name">Uganda Regional Chamber</p>
+          <p class="brand-tag">Connecting business across Uganda</p>
+        </div>
+      </div>
+      <button id="menu" type="button" aria-label="Toggle navigation">☰</button>
+      <nav>
+        <ul class="navigation">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="directory.html">Directory</a></li>
+          <li><a href="discover.html" class="active">Discover</a></li>
+          <li><a href="join.html">Join</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section class="discover-hero">
+        <h1>Discover Our Region</h1>
+        <p>Explore features, attractions, and local businesses that make our region a great place to visit and invest.</p>
+        <div id="visit-msg" aria-live="polite"></div>
+      </section>
+
+      <section aria-labelledby="discover-heading">
+        <h2 id="discover-heading">Places to Explore</h2>
+        <div id="discover-grid" class="discover-grid" role="list"></div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="footer-contact">
+        <p><strong>Uganda Regional Chamber of Commerce</strong></p>
+        <p>Plot 14, Ntinda Road</p>
+        <p>Kampala, Uganda</p>
+        <p>+256 772 555 018</p>
+      </div>
+      <div class="footer-info">
+        <p>Andrew Ssebuufu | WDD 231</p>
+        <p>Last Updated: <span id="lastModified"></span></p>
+      </div>
+      <div class="footer-copy">
+        <p>© <span id="currentyear"></span> Uganda Regional Chamber</p>
+        <p>All rights reserved.</p>
+      </div>
+    </footer>
+  </body>
+</html>
