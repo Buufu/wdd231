@@ -1,0 +1,2 @@
+﻿{"version":"26.7.31","messages":[{"type":"error","lastLine":23,"lastColumn":58,"firstColumn":5,"message":"A “script” element with “type=module” must not have a “defer” attribute.","extract":"ript>\n    <script type=\"module\" src=\"scripts/discover.js\" defer></scri","hiliteStart":10,"hiliteLength":54}]}
+
