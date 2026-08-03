@@ -19,6 +19,8 @@
   <link rel="stylesheet" href="styles/small.css">
   <link rel="stylesheet" href="styles/final.css">
   <script src="scripts/navigation.js" defer></script>
+  <script src="scripts/theme.js" defer></script>
+  <script src="scripts/candles.js" defer></script>
 </head>
 <body>
   <header>
@@ -30,32 +32,48 @@
       </div>
     </div>
     <button id="menu" aria-label="Open Navigation">☰</button>
+    <button id="theme-toggle" aria-label="Toggle theme">🌓</button>
     <nav>
       <ul class="navigation">
         <li><a href="index.html">Home</a></li>
         <li><a href="learn.html">Learn</a></li>
         <li><a href="tools.html">Tools</a></li>
         <li><a href="contact.html">Contact</a></li>
+        <li><a href="journal.html">Journal</a></li>
         <li><a class="active" href="video.html">Video</a></li>
       </ul>
     </nav>
   </header>
 
   <main>
+    <canvas id="candles-canvas" aria-hidden="true"></canvas>
     <section class="content-hero">
-      <h1>Project Video Demo</h1>
-      <p>Watch the demonstration of the Smart Forex Trading Hub site, including data, JavaScript, and ES module usage.</p>
+      <h1>Video Learning Center</h1>
+      <p>Watch curated lessons, trade walkthroughs, and weekly market outlooks.</p>
     </section>
 
-    <section class="video-link">
-      <p>Replace the link below with your final public video URL.</p>
-      <p><a href="VIDEO_URL_HERE" target="_blank" rel="noopener">Your video demo link goes here</a></p>
+    <section class="video-embeds">
+      <h2>Beginner Forex Course</h2>
+      <div class="video-wrap"><iframe data-vid="beginner" width="100%" height="420" title="Beginner Forex Course" frameborder="0" allowfullscreen></iframe></div>
+
+      <h2>Risk Management</h2>
+      <div class="video-wrap"><iframe data-vid="risk" width="100%" height="420" title="Risk Management" frameborder="0" allowfullscreen></iframe></div>
+
+      <h2>ICT Concepts & Smart Money</h2>
+      <div class="video-wrap"><iframe data-vid="ict" width="100%" height="420" title="ICT Concepts" frameborder="0" allowfullscreen></iframe></div>
+
+      <h2>Live Trade Analysis</h2>
+      <div class="video-wrap"><iframe data-vid="live" width="100%" height="420" title="Live Trade Analysis" frameborder="0" allowfullscreen></iframe></div>
+
+      <h2>Weekly Market Outlook</h2>
+      <div class="video-wrap"><iframe data-vid="weekly" width="100%" height="420" title="Weekly Market Outlook" frameborder="0" allowfullscreen></iframe></div>
     </section>
+    <script src="scripts/video-embed.js" defer></script>
   </main>
 
-  <footer>
+    <footer>
     <p>Smart Forex Trading Hub | WDD 231 | <a href="attributions.html">Attributions</a></p>
-    <p>Video demo: <a href="VIDEO_URL_HERE" target="_blank" rel="noopener">Watch the project demo</a></p>
+    <p>Video demo: <a href="video.html">Watch the project demo</a></p>
   </footer>
 </body>
 </html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Trading Journal | Smart Forex Trading Hub</title>
+  <link rel="stylesheet" href="styles/normalize.css">
+  <link rel="stylesheet" href="styles/small.css">
+  <link rel="stylesheet" href="styles/final.css">
+  <script src="scripts/navigation.js" defer></script>
+  <script src="scripts/journal.js" defer></script>
+</head>
+<body>
+  <header>
+    <div class="brand">
+      <img src="images/favicon.svg" alt="logo" width="48" height="48">
+      <div>
+        <p class="brand-name">Smart Forex Trading Hub</p>
+        <p class="brand-tag">Trading Journal</p>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="content-hero">
+      <h1>Trading Journal</h1>
+      <p>Record your trades and notes. Entries are stored locally in your browser.</p>
+    </section>
+
+    <section class="journal-form" aria-label="Add journal entry">
+      <label>Pair<input id="j-pair" placeholder="EUR/USD"></label>
+      <label>Entry<input id="j-entry" type="number" step="0.0001"></label>
+      <label>Exit<input id="j-exit" type="number" step="0.0001"></label>
+      <label>Stop Loss<input id="j-sl" type="number" step="0.0001"></label>
+      <label>Take Profit<input id="j-tp" type="number" step="0.0001"></label>
+      <label>Profit/Loss<input id="j-pl" type="number" step="0.01"></label>
+      <label>Notes<textarea id="j-notes"></textarea></label>
+      <button id="j-save">Save Entry</button>
+    </section>
+
+    <section class="journal-list">
+      <h2>Your Entries</h2>
+      <div id="entries"></div>
+    </section>
+  </main>
+
+  <footer>
+    <p><a href="index.html">Back to Home</a></p>
+  </footer>
+</body>
+</html>

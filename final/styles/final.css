@@ -7,6 +7,21 @@
   --accent: #f5b841;
   --text: #1f2937;
   --border: #cbd5e1;
+  --trade-bg: #0b1220;
+  --trade-surface: #071026;
+  --trade-text: #e6eef8;
+  --trade-up: #16a34a;
+  --trade-down: #ef4444;
+}
+
+/* Dark theme overrides */
+:root.dark-theme {
+  --bg: #071026;
+  --surface: #071026;
+  --primary: #0ea5a4;
+  --accent: #f59e0b;
+  --text: #e6eef8;
+  --border: rgba(255,255,255,0.06);
 }
 
 * { box-sizing: border-box; }
@@ -63,6 +78,38 @@ nav { position: relative; }
 
 .hero, .content-hero { padding: 1rem; background: var(--surface); margin: 1rem; border-radius: 20px; }
 .hero { display: grid; gap: 1rem; }
+.trading-hero { background: linear-gradient(180deg, rgba(11,61,145,0.06), rgba(5,10,20,0.02)); }
+
+.strategy-cards ul { list-style: none; padding: 0; display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 0.5rem; margin: 0 1rem 1rem; }
+.strategy-cards li { background: var(--surface); padding: 0.6rem 0.8rem; border-radius: 12px; border: 1px solid var(--border); }
+
+.featured-charts .chart-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 0.75rem; margin: 0 1rem 1rem; }
+.featured-charts figure { background: var(--surface); border-radius: 12px; overflow: hidden; border: 1px solid var(--border); }
+.featured-charts figcaption { padding: 0.5rem; font-size: 0.9rem; }
+
+.live-market { margin: 1rem; padding: 1rem; background: #071026; color: var(--trade-text); border-radius: 12px; }
+.market-ticker { display: flex; gap: 1rem; flex-wrap: wrap; }
+.market-item { background: rgba(255,255,255,0.04); padding: 0.6rem 0.8rem; border-radius: 10px; min-width: 140px; }
+.market-item .pair { font-weight: 700; }
+.market-item .change.up { color: var(--trade-up); }
+.market-item .change.down { color: var(--trade-down); }
+
+/* Glassmorphism cards */
+.highlights article, .lesson-grid article, .tool-grid article, .contact-grid article, .featured-charts figure, .strategy-cards li {
+  background: rgba(255,255,255,0.04);
+  backdrop-filter: blur(6px) saturate(120%);
+  border: 1px solid rgba(255,255,255,0.06);
+}
+
+/* Candlestick canvas overlay */
+#candles-canvas { position: fixed; left: 0; top: 0; width: 100%; height: 100%; pointer-events: none; opacity: 0.06; z-index: 0; }
+
+/* Make main content above the canvas */
+main, header, footer { position: relative; z-index: 1; }
+
+/* Slight hover animations for cards */
+.highlights article, .tool-grid article, .strategy-cards li { transition: transform 220ms ease, box-shadow 220ms ease; }
+.highlights article:hover, .tool-grid article:hover, .strategy-cards li:hover { transform: translateY(-6px); box-shadow: 0 8px 24px rgba(2,6,23,0.45); }
 
 .hero img { border-radius: 20px; }
 

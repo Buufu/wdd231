@@ -20,6 +20,8 @@
   <link rel="stylesheet" href="styles/final.css">
   <script src="scripts/navigation.js" defer></script>
   <script type="module" src="scripts/learn.js"></script>
+  <script src="scripts/theme.js" defer></script>
+  <script src="scripts/candles.js" defer></script>
 </head>
 <body>
   <header>
@@ -31,18 +33,21 @@
       </div>
     </div>
     <button id="menu" aria-label="Open Navigation">☰</button>
+    <button id="theme-toggle" aria-label="Toggle theme">🌓</button>
     <nav>
       <ul class="navigation">
         <li><a href="index.html">Home</a></li>
         <li><a class="active" href="learn.html">Learn</a></li>
         <li><a href="tools.html">Tools</a></li>
         <li><a href="contact.html">Contact</a></li>
+        <li><a href="journal.html">Journal</a></li>
         <li><a href="video.html">Video</a></li>
       </ul>
     </nav>
   </header>
 
   <main>
+    <canvas id="candles-canvas" aria-hidden="true"></canvas>
     <section class="content-hero">
       <h1>Forex Learning Center</h1>
       <p>Master the core concepts of Forex trading with dynamic lessons loaded from JSON data.</p>
@@ -59,7 +64,7 @@
 
   <footer>
     <p>Smart Forex Trading Hub | WDD 231 | <a href="attributions.html">Attributions</a></p>
-    <p>Video demo: <a href="VIDEO_URL_HERE" target="_blank" rel="noopener">Replace VIDEO_URL_HERE with your final demo URL</a></p>
+    <p>Video demo: <a href="video.html">Watch the project demo</a></p>
   </footer>
 </body>
 </html>

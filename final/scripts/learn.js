@@ -7,12 +7,13 @@ const closeModalButton = document.getElementById('modal-close');
 
 function openModal(lesson) {
   if (!modalContent) return;
+  const lessonBody = lesson.content || lesson.summary;
   modalContent.innerHTML = `
     <h3>${lesson.title}</h3>
     <p><strong>Type:</strong> ${lesson.type}</p>
     <p><strong>Duration:</strong> ${lesson.duration}</p>
     <p><strong>Level:</strong> ${lesson.level}</p>
-    <p>${lesson.summary}</p>
+    <div class="lesson-content">${lessonBody}</div>
   `;
   detailModal.showModal();
 }

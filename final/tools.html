@@ -20,6 +20,7 @@
   <link rel="stylesheet" href="styles/final.css">
   <script src="scripts/navigation.js" defer></script>
   <script type="module" src="scripts/tools.js"></script>
+  <script src="scripts/theme.js" defer></script>
 </head>
 <body>
   <header>
@@ -31,12 +32,14 @@
       </div>
     </div>
     <button id="menu" aria-label="Open Navigation">☰</button>
+    <button id="theme-toggle" aria-label="Toggle theme">🌓</button>
     <nav>
       <ul class="navigation">
         <li><a href="index.html">Home</a></li>
         <li><a href="learn.html">Learn</a></li>
         <li><a class="active" href="tools.html">Tools</a></li>
         <li><a href="contact.html">Contact</a></li>
+        <li><a href="journal.html">Journal</a></li>
         <li><a href="video.html">Video</a></li>
       </ul>
     </nav>
@@ -49,28 +52,74 @@
     </section>
 
     <section class="tool-grid">
-      <article>
+      <article class="calculator" id="position-size">
+        <h2>Position Size Calculator</h2>
+        <label>Account Balance
+          <input type="number" id="ps-account" placeholder="1000">
+        </label>
+        <label>Risk % per Trade
+          <input type="number" id="ps-risk" placeholder="1">
+        </label>
+        <label>Stop Loss (pips)
+          <input type="number" id="ps-sl" placeholder="50">
+        </label>
+        <label>Pair Price (optional)
+          <input type="number" id="ps-price" placeholder="1.1742">
+        </label>
+        <button id="ps-calc">Calculate Position Size</button>
+        <div id="ps-result" class="calc-result" aria-live="polite"></div>
+      </article>
+
+      <article class="calculator" id="pip-calc">
+        <h2>Pip Calculator</h2>
+        <label>Pair
+          <input type="text" id="pip-pair" placeholder="EUR/USD">
+        </label>
+        <label>Lot Size (lots)
+          <input type="number" id="pip-lot" placeholder="1">
+        </label>
+        <button id="pip-calc-btn">Calculate Pip Value</button>
+        <div id="pip-result" class="calc-result" aria-live="polite"></div>
+      </article>
+
+      <article class="calculator" id="risk-calc">
         <h2>Risk Calculator</h2>
-        <p>Estimate trade risk with position size, stop loss, and account balance inputs.</p>
+        <label>Entry Price
+          <input type="number" id="risk-entry" placeholder="1.1700">
+        </label>
+        <label>Stop Loss
+          <input type="number" id="risk-sl" placeholder="1.1650">
+        </label>
+        <label>Account Balance
+          <input type="number" id="risk-account" placeholder="1000">
+        </label>
+        <label>Risk %
+          <input type="number" id="risk-percent" placeholder="1">
+        </label>
+        <button id="risk-calc-btn">Estimate Risk</button>
+        <div id="risk-result" class="calc-result" aria-live="polite"></div>
       </article>
-      <article>
-        <h2>Pip Value Guide</h2>
-        <p>Calculate pip values for different currency pairs and lot sizes.</p>
-      </article>
-      <article>
-        <h2>Glossary</h2>
-        <p>Quick definitions for Forex terminology like spread, margin, and leverage.</p>
-      </article>
-      <article>
-        <h2>Plan Checklist</h2>
-        <p>Follow a trading plan checklist to keep trades disciplined and consistent.</p>
+
+      <article class="calculator" id="compound-calc">
+        <h2>Compounding Calculator</h2>
+        <label>Starting Capital
+          <input type="number" id="comp-start" placeholder="1000">
+        </label>
+        <label>Return % per Period
+          <input type="number" id="comp-return" placeholder="2">
+        </label>
+        <label>Periods
+          <input type="number" id="comp-periods" placeholder="12">
+        </label>
+        <button id="comp-calc-btn">Compute Compound Growth</button>
+        <div id="comp-result" class="calc-result" aria-live="polite"></div>
       </article>
     </section>
   </main>
 
   <footer>
     <p>Smart Forex Trading Hub | WDD 231 | <a href="attributions.html">Attributions</a></p>
-    <p>Video demo: <a href="VIDEO_URL_HERE" target="_blank" rel="noopener">Watch the project demo</a></p>
+    <p>Video demo: <a href="video.html">Watch the project demo</a></p>
   </footer>
 </body>
 </html>

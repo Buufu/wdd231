@@ -20,6 +20,9 @@
   <link rel="stylesheet" href="styles/final.css">
   <script src="scripts/navigation.js" defer></script>
   <script src="scripts/home.js" defer></script>
+  <script src="scripts/markets.js" defer></script>
+  <script src="scripts/theme.js" defer></script>
+   <script src="scripts/candles.js" defer></script>
 </head>
 <body>
   <header>
@@ -31,46 +34,103 @@
       </div>
     </div>
     <button id="menu" aria-label="Open Navigation">☰</button>
+    <button id="theme-toggle" aria-label="Toggle theme">🌓</button>
     <nav>
       <ul class="navigation">
         <li><a class="active" href="index.html">Home</a></li>
         <li><a href="learn.html">Learn</a></li>
         <li><a href="tools.html">Tools</a></li>
         <li><a href="contact.html">Contact</a></li>
+        <li><a href="journal.html">Journal</a></li>
         <li><a href="video.html">Video</a></li>
       </ul>
     </nav>
   </header>
+    <canvas id="candles-canvas" aria-hidden="true"></canvas>
 
   <main>
-    <section class="hero">
+    <section class="hero trading-hero">
       <div>
-        <h1>Smart Forex Trading Hub</h1>
-        <p>Your resource for Forex basics, strategy, risk management, and trading tools.</p>
+        <h1>Master Forex Trading Like a Professional</h1>
+        <p>Learn price action, ICT concepts, Smart Money Concepts (SMC), risk management, and trading psychology with real chart examples.</p>
         <a class="cta" href="learn.html">Start Learning</a>
       </div>
-      <img src="images/hero.webp" alt="Forex trading dashboard on a laptop" loading="lazy">
+      <img src="https://i.pinimg.com/1200x/f9/d1/c7/f9d1c7e41b87ca3afb21b125309aef3b.jpg" alt="Multi-monitor trading setup with candlestick charts" loading="lazy">
     </section>
 
     <section class="highlights">
       <article>
-        <h2>Learn the Basics</h2>
-        <p>Understand currency pairs, pips, leverage, and the foundations of Forex trading.</p>
+        <h2>Latest Market Analysis</h2>
+        <p>Short breakdowns of the day's setups across major FX pairs and indices.</p>
       </article>
       <article>
-        <h2>Trade Confidently</h2>
-        <p>Explore practical strategies, risk management, and trading psychology.</p>
+        <h2>Featured Strategies</h2>
+        <p>Practical, rules-based strategies you can test and adapt.</p>
       </article>
       <article>
-        <h2>Useful Tools</h2>
-        <p>Access calculators and resources designed for new and intermediate traders.</p>
+        <h2>Trading Tools</h2>
+        <p>Calculators and utilities to manage risk and position sizing.</p>
       </article>
+    </section>
+
+    <section class="strategy-cards" aria-label="Strategy cards">
+      <h2>Popular Strategies</h2>
+      <ul>
+        <li>✔ ICT Silver Bullet</li>
+        <li>✔ Fair Value Gaps (FVG)</li>
+        <li>✔ Order Blocks</li>
+        <li>✔ Liquidity Sweeps</li>
+        <li>✔ Break and Retest</li>
+        <li>✔ Trend Following</li>
+        <li>✔ EMA Strategy</li>
+        <li>✔ Support &amp; Resistance</li>
+        <li>✔ London Breakout</li>
+        <li>✔ New York Session Strategy</li>
+      </ul>
+    </section>
+
+    <section class="featured-charts">
+      <h2>Real Chart Examples</h2>
+      <div class="chart-grid">
+        <figure>
+          <img src="https://i.pinimg.com/736x/bc/20/41/bc20419a751fdc058a3e65fc0c417810.jpg" alt="EUR/USD chart example">
+          <figcaption>EUR/USD — price action setup</figcaption>
+        </figure>
+        <figure>
+          <img src="https://i.pinimg.com/736x/19/dd/d1/19ddd14c2859deb169616c8c2f632233.jpg" alt="GBP/USD chart example">
+          <figcaption>GBP/USD — breakout retest</figcaption>
+        </figure>
+        <figure>
+          <img src="https://i.pinimg.com/736x/6d/b5/29/6db529477f7a5ece089af97a35aad507.jpg" alt="Indices setup">
+          <figcaption>NAS100 — momentum trade</figcaption>
+        </figure>
+        <figure>
+          <img src="https://i.pinimg.com/736x/5e/67/d8/5e67d84bfcd275d1c27ff14862bde2b2.jpg" alt="Gold XAUUSD chart">
+          <figcaption>Gold (XAUUSD) — swing setup</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="live-market" aria-label="Live market snapshot">
+      <h2>Live Market</h2>
+      <div id="market-ticker" class="market-ticker"></div>
+    </section>
+
+    <section class="economic-calendar">
+      <h2>Economic Calendar (upcoming)</h2>
+      <ul>
+        <li>Non-Farm Payrolls — USD — High</li>
+        <li>CPI (YoY) — EUR — Medium</li>
+        <li>FOMC Rate Decision — USD — High</li>
+        <li>GDP (QoQ) — GBP — Medium</li>
+        <li>Retail Sales — AUD — Low</li>
+      </ul>
     </section>
   </main>
 
   <footer>
     <p>Smart Forex Trading Hub | WDD 231 | <a href="attributions.html">Attributions</a></p>
-    <p>Video demo: <a href="VIDEO_URL_HERE" target="_blank" rel="noopener">Watch the project demo</a></p>
+    <p>Video demo: <a href="video.html">Watch the project demo</a></p>
   </footer>
 </body>
 </html>
