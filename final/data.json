@@ -1,0 +1,17 @@
+[
+  {"id":1,"title":"Forex Basics","type":"Lesson","duration":"5 min","level":"Beginner","summary":"Understand currency pairs, pips, and spreads.","image":"images/lesson-01.webp"},
+  {"id":2,"title":"Market Hours","type":"Lesson","duration":"4 min","level":"Beginner","summary":"Learn when the major Forex sessions are open.","image":"images/lesson-02.webp"},
+  {"id":3,"title":"Major Pairs","type":"Lesson","duration":"5 min","level":"Beginner","summary":"Explore USD, EUR, JPY, and GBP currency pairs.","image":"images/lesson-03.webp"},
+  {"id":4,"title":"Risk Management","type":"Lesson","duration":"6 min","level":"Intermediate","summary":"Use stop losses and position sizing to protect capital.","image":"images/lesson-04.webp"},
+  {"id":5,"title":"Trading Psychology","type":"Lesson","duration":"4 min","level":"Intermediate","summary":"Manage emotions and stick to your plan.","image":"images/lesson-05.webp"},
+  {"id":6,"title":"Technical Setup","type":"Lesson","duration":"5 min","level":"Intermediate","summary":"Identify trend, support, and resistance on charts.","image":"images/lesson-06.webp"},
+  {"id":7,"title":"Breakout Strategy","type":"Lesson","duration":"5 min","level":"Intermediate","summary":"Learn how to trade breakout opportunities safely.","image":"images/lesson-07.webp"},
+  {"id":8,"title":"Trend Following","type":"Lesson","duration":"6 min","level":"Intermediate","summary":"Follow momentum and keep trades aligned with the trend.","image":"images/lesson-08.webp"},
+  {"id":9,"title":"Fundamental News","type":"Lesson","duration":"4 min","level":"Intermediate","summary":"See how economic reports affect Forex prices.","image":"images/lesson-09.webp"},
+  {"id":10,"title":"Currency Strength","type":"Tool","duration":"3 min","level":"All","summary":"Compare which currencies are strong or weak today.","image":"images/lesson-10.webp"},
+  {"id":11,"title":"Pip Calculator","type":"Tool","duration":"3 min","level":"All","summary":"Calculate pip value for different lot sizes.","image":"images/lesson-11.webp"},
+  {"id":12,"title":"News Calendar","type":"Tool","duration":"3 min","level":"All","summary":"Track key economic events that move the market.","image":"images/lesson-12.webp"},
+  {"id":13,"title":"Glossary","type":"Resource","duration":"2 min","level":"All","summary":"Review important Forex terminology and definitions.","image":"images/lesson-13.webp"},
+  {"id":14,"title":"Journal Template","type":"Resource","duration":"2 min","level":"All","summary":"Keep a trading journal to learn from every trade.","image":"images/lesson-14.webp"},
+  {"id":15,"title":"Plan Checklist","type":"Resource","duration":"3 min","level":"All","summary":"Follow a checklist before entering every trade.","image":"images/lesson-15.webp"}
+]

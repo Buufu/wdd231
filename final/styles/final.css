@@ -1,0 +1,156 @@
+:root {
+  color-scheme: light;
+  font-family: 'Roboto', sans-serif;
+  --bg: #f3f6fb;
+  --surface: #ffffff;
+  --primary: #0b3d91;
+  --accent: #f5b841;
+  --text: #1f2937;
+  --border: #cbd5e1;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+}
+
+img { max-width: 100%; display: block; }
+
+a { color: var(--primary); text-decoration: none; }
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1rem;
+  background: var(--surface);
+  border-bottom: 1px solid var(--border);
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.brand-name { margin: 0; font-family: 'Inter', sans-serif; font-size: 1.2rem; }
+.brand-tag { margin: 0; color: #475569; }
+
+#menu { display: inline-flex; align-items: center; justify-content: center; width: 3rem; height: 3rem; background: var(--primary); color: white; border: none; border-radius: 10px; cursor: pointer; }
+
+nav { position: relative; }
+
+.navigation {
+  display: none;
+  flex-direction: column;
+  gap: 0.75rem;
+  list-style: none;
+  padding: 0;
+  margin: 1rem 0 0;
+}
+
+.navigation.open { display: flex; }
+
+.navigation li a { display: block; padding: 0.75rem 1rem; background: #f8fbff; border-radius: 10px; }
+
+.navigation li a.active { background: var(--primary); color: white; }
+
+.hero, .content-hero { padding: 1rem; background: var(--surface); margin: 1rem; border-radius: 20px; }
+.hero { display: grid; gap: 1rem; }
+
+.hero img { border-radius: 20px; }
+
+.cta { display: inline-block; margin-top: 1rem; background: var(--primary); color: white; padding: 0.85rem 1.5rem; border-radius: 12px; }
+
+.highlights, .lesson-grid, .tool-grid, .contact-grid { display: grid; gap: 1rem; margin: 1rem; }
+
+.highlights article, .lesson-grid article, .tool-grid article, .contact-grid article { padding: 1rem; background: var(--surface); border-radius: 18px; border: 1px solid var(--border); }
+
+.lesson-status { margin-top: 0.75rem; color: #475569; }
+
+.lesson-grid { grid-template-columns: 1fr; }
+.lesson-card {
+  display: grid;
+  gap: 1rem;
+}
+.lesson-card img { border-radius: 18px; height: 220px; object-fit: cover; }
+.lesson-card h2 { margin: 0 0 0.5rem; }
+.lesson-card p { margin: 0 0 1rem; }
+.lesson-card button {
+  border: none;
+  background: var(--primary);
+  color: white;
+  padding: 0.75rem 1rem;
+  border-radius: 12px;
+  cursor: pointer;
+}
+
+.detail-modal {
+  border: none;
+  border-radius: 20px;
+  max-width: 640px;
+  width: min(90vw, 640px);
+  padding: 0;
+}
+
+.detail-modal::backdrop { background: rgba(15, 23, 42, 0.7); }
+
+.detail-modal .modal-content {
+  padding: 1.5rem;
+  background: var(--surface);
+  border-radius: 20px;
+}
+
+#modal-close {
+  margin: 1rem;
+  width: calc(100% - 2rem);
+  border: none;
+  background: var(--accent);
+  color: white;
+  padding: 0.85rem 1rem;
+  border-radius: 12px;
+  cursor: pointer;
+}
+
+.video-link { margin: 1rem; padding: 1rem; background: var(--surface); border-radius: 18px; border: 1px solid var(--border); }
+
+.contact-grid label {
+  display: grid;
+  gap: 0.35rem;
+  font-weight: 500;
+}
+
+.contact-grid input,
+.contact-grid textarea {
+  width: 100%;
+  padding: 0.85rem;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  font: inherit;
+}
+
+.contact-grid button {
+  margin-top: 0.75rem;
+  border: none;
+  background: var(--primary);
+  color: white;
+  padding: 0.85rem 1rem;
+  border-radius: 12px;
+  cursor: pointer;
+}
+
+footer { margin: 1rem; padding: 1rem; background: var(--surface); border-radius: 18px; border: 1px solid var(--border); text-align: center; }
+
+@media (min-width: 768px) {
+  header { display: grid; grid-template-columns: auto 1fr auto; align-items: center; }
+  .navigation { display: flex; flex-direction: row; margin: 0; gap: 1rem; }
+  #menu { display: none; }
+  .hero { grid-template-columns: 1fr 1fr; align-items: center; }
+  .highlights, .lesson-grid, .tool-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}

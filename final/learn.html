@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Learn Forex Trading | Smart Forex Trading Hub</title>
+  <meta name="description" content="Learn Forex trading with structured lessons on currency pairs, strategies, risk management, and trading psychology.">
+  <meta name="author" content="Andrew Ssebuufu">
+  <meta property="og:title" content="Learn Forex Trading at Smart Forex Trading Hub">
+  <meta property="og:description" content="Structured Forex lessons covering currency pairs, trading strategy, risk management, and psychology.">
+  <meta property="og:image" content="https://buufu.github.io/wdd231/final/images/favicon.svg">
+  <meta property="og:url" content="https://buufu.github.io/wdd231/final/learn.html">
+  <meta property="og:type" content="article">
+  <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@600;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles/normalize.css">
+  <link rel="stylesheet" href="styles/small.css">
+  <link rel="stylesheet" href="styles/final.css">
+  <script src="scripts/navigation.js" defer></script>
+  <script type="module" src="scripts/learn.js"></script>
+</head>
+<body>
+  <header>
+    <div class="brand">
+      <img src="images/favicon.svg" alt="Smart Forex Trading Hub logo" width="48" height="48">
+      <div>
+        <p class="brand-name">Smart Forex Trading Hub</p>
+        <p class="brand-tag">Learn Forex with confidence</p>
+      </div>
+    </div>
+    <button id="menu" aria-label="Open Navigation">☰</button>
+    <nav>
+      <ul class="navigation">
+        <li><a href="index.html">Home</a></li>
+        <li><a class="active" href="learn.html">Learn</a></li>
+        <li><a href="tools.html">Tools</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="video.html">Video</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="content-hero">
+      <h1>Forex Learning Center</h1>
+      <p>Master the core concepts of Forex trading with dynamic lessons loaded from JSON data.</p>
+      <div class="lesson-status" id="lesson-status">Loading lessons...</div>
+    </section>
+
+    <section class="lesson-grid"></section>
+
+    <dialog id="detail-modal" class="detail-modal">
+      <div class="modal-content"></div>
+      <button id="modal-close" type="button">Close</button>
+    </dialog>
+  </main>
+
+  <footer>
+    <p>Smart Forex Trading Hub | WDD 231 | <a href="attributions.html">Attributions</a></p>
+    <p>Video demo: <a href="VIDEO_URL_HERE" target="_blank" rel="noopener">Replace VIDEO_URL_HERE with your final demo URL</a></p>
+  </footer>
+</body>
+</html>
