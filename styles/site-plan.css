@@ -4,7 +4,7 @@
     --page-bg: #F2F5F9;
     --surface: #ffffff;
     --primary: #0B3D91;
-    --accent: #F5B841;
+    --accent: #B07200;
     --text: #1F2937;
     --border: #CBD5E1;
     --muted: #475569;
@@ -88,12 +88,14 @@ ul, ol {
     border-radius: 0.25rem;
     border: 1px solid #94A3B8;
     vertical-align: middle;
+    color: var(--text);
 }
 
 .color-swatch.primary { background: var(--primary); }
 .color-swatch.accent { background: var(--accent); }
 .color-swatch.neutral { background: var(--page-bg); }
 .color-swatch.text { background: var(--text); }
+.color-swatch.primary { color: #ffffff; }
 
 .wireframes {
     display: grid;
@@ -133,7 +135,7 @@ ul, ol {
 .cards-box,
 .content-box,
 .footer-box {
-    background: rgba(11, 61, 145, 0.05);
+    background: rgba(11, 61, 145, 0.08);
 }
 
 .footer-box {
