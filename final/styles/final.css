@@ -194,6 +194,57 @@ main, header, footer { position: relative; z-index: 1; }
 
 footer { margin: 1rem; padding: 1rem; background: var(--surface); border-radius: 18px; border: 1px solid var(--border); text-align: center; }
 
+.journal-form,
+.journal-list {
+  margin: 1rem;
+  padding: 1rem;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 18px;
+}
+
+.journal-form {
+  display: grid;
+  gap: 0.75rem;
+}
+
+.journal-form label {
+  display: grid;
+  gap: 0.35rem;
+  font-weight: 500;
+}
+
+.journal-form input,
+.journal-form textarea {
+  width: 100%;
+  padding: 0.85rem;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  font: inherit;
+  background: var(--surface);
+  color: var(--text);
+}
+
+.journal-form button,
+.journal-entry .del {
+  border: none;
+  background: var(--primary);
+  color: white;
+  padding: 0.85rem 1rem;
+  border-radius: 12px;
+  cursor: pointer;
+}
+
+.journal-entry {
+  display: grid;
+  gap: 0.5rem;
+  padding: 1rem;
+  margin-bottom: 0.75rem;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+}
+
 @media (min-width: 768px) {
   header { display: grid; grid-template-columns: auto 1fr auto; align-items: center; }
   .navigation { display: flex; flex-direction: row; margin: 0; gap: 1rem; }

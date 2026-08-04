@@ -1,11 +1,11 @@
 document.addEventListener('DOMContentLoaded', ()=>{
   // Map of sections to YouTube IDs — edit here to use your real IDs
   const videos = {
-    'beginner': 'ysz5S6PUM-U',
-    'risk': 'ysz5S6PUM-U',
-    'ict': 'ysz5S6PUM-U',
-    'live': 'ysz5S6PUM-U',
-    'weekly': 'ysz5S6PUM-U'
+    'beginner': 'wIyZcY6kNuo',
+    'risk': 'qN0-ltRAcV4',
+    'ict': 'nLdUxnbPG04',
+    'live': 'CLc48EZAU80',
+    'weekly': 'GYj233xqTQU'
   };
 
   document.querySelectorAll('iframe[data-vid]').forEach(iframe=>{
